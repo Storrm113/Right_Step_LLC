@@ -6,3 +6,11 @@
 .font-archivo {
   font-family: "Archivo", sans-serif;
 }
+
+Body {
+  background-image: url('./img/Background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}

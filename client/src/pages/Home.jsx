@@ -1,21 +1,13 @@
-import Navbar from "../components/Navbar";
-import bg from "../img/Background.png";
+import React from "react";
+import ServicesSection from "../components/ServicesSection";
 
-const Home = () => {
+function Home() {
   return (
-    <div
-      className="min-h-screen w-full bg-cover bg-center text-white"
-      style={{ backgroundImage: `url(${bg})` }}
-    >
-      {/* Header row with company name and nav */}
-      <header className="w-full flex items-center justify-between px-6 py-6 border-b border-white bg-black bg-opacity-50">
-        <h1 className="text-4xl font-light italic font-archivo">
-          Right Step Professional Services LLC
-        </h1>
-        <Navbar />
-      </header>
-    </div>
+    <main className="p-4">
+      <h2 className="text-xl font-semibold mb-4">Making the Right Step to a fresh looking yard and elegant floors</h2>
+      <ServicesSection />
+    </main>
   );
-};
+}
 
 export default Home;
