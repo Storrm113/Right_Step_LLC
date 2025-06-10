@@ -1,18 +1,26 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Gallery from "./pages/Gallery";
-import Contact from "./pages/Contact";
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Services from './components/Services'
+import ContactForm from './components/ContactForm'
+// import Footer from './components/Footer'
 
-const App = () => {
+function App() {
   return (
-    <BrowserRouter>
+    <>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={
+          <>
+            <Hero />
+            <Services />
+            <ContactForm />
+          </>
+        } />
       </Routes>
-    </BrowserRouter>
-  );
-};
+      <Footer />
+    </>
+  )
+}
 
-export default App;
+export default App
